@@ -9,4 +9,12 @@ public class Carro {
 	boolean biCombustivel;
 	
 	Proprietario dono; // relacionamento tem um
+	
+	void ligar() {
+		if(modelo == null) {
+			return;
+		}
+		
+		System.out.println("Ligando o carro: " + modelo);
+	}
 }
