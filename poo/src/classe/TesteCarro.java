@@ -61,7 +61,7 @@ public class TesteCarro {
 		seuCarro.dono.cidade = "Bento Gonçalves";
 		seuCarro.dono.bairro = "Quadrado";
 		
-		System.out.println("Proprietário 02: " + seuCarro.dono.nome);
+		System.out.println("Proprietário carro 02: " + seuCarro.dono.nome);
 		
 		
 				

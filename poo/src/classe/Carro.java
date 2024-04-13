@@ -6,6 +6,7 @@ public class Carro {
 	String modelo;
 	String cor;
 	int anoDeFabricacao;
+	boolean biCombustivel;
 	
 	Proprietario dono; // relacionamento tem um
 }
