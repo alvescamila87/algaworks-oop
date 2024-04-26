@@ -1,9 +1,16 @@
 package com.algaworks.curso.fjoo.treinador;
 
+import com.algaworks.curso.fjoo.animal.Cachorro;
+
 public class TreinadorCachorro {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
+		Cachorro cachorro = new Cachorro();
+		cachorro.setNome("Marlene");
+		
+		DonoCachorro dono = new DonoCachorro();
+		dono.ensinarCachorroSentar(cachorro);
 
 	}
 
