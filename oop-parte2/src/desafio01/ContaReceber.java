@@ -6,8 +6,8 @@ public class ContaReceber extends Conta {
 	
 	public ContaReceber(){}
 	
-	public ContaReceber(Cliente cliente, String descricao, Double valor, String dataVencimento){
-		super();
+	public ContaReceber(Cliente cliente, String descricao, double valor, String dataVencimento){
+		super(descricao, valor, dataVencimento);
 		this.cliente = cliente;
 	}
 	
@@ -20,16 +20,16 @@ public class ContaReceber extends Conta {
 	}
 
 	public void receber() {
-		if(getSituacaoConta().equals(SituacaoConta.PAGA)){
+		if(getSituacaoConta() == SituacaoConta.PAGA){
 			System.out.println("Esta conta já foi paga. Situação da conta: " + getSituacaoConta());	
 		} else {
-			this.situacaoConta = SituacaoConta.PAGA;
+			situacaoConta = SituacaoConta.PAGA;
 			
 			System.out.println();
 			System.out.println("INFORMAÇÕES DE RECEBIMENTO");
 			System.out.println("---------------------------------");
 			System.out.println("Descrição: " + getDescricao());
-			System.out.println("Valor: " + getValor());
+			System.out.printf("Valor: R$%.2f \n", getValor());
 			System.out.println("Descrição: " + getDataVencimento());
 			System.out.println("Cliente: " + getCliente().getNome());		
 		}
@@ -37,11 +37,11 @@ public class ContaReceber extends Conta {
 	
 	@Override
 	public void cancelar() {
-		if(this.getValor() > 50_000d) {
-			System.out.println("Não é permitido cancelamento de conta a receber ACIMA de R$ 50.000,00. Valor da conta: " + this.getValor());
+		if(getValor() > 50_000d) {
+			System.out.printf("Não é permitido cancelamento de conta a receber ACIMA de R$ 50.000,00. Valor da conta: R$%.2f \n", getValor());
 		} else {
 			super.cancelar();
-			System.out.println("Conta a receber cancelada com sucesso!");
+			// já possui mensagem de "cancelamento com sucesso" dentro do método super
 		}
 	}
 

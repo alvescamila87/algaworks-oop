@@ -8,7 +8,14 @@ public class Conta {
 	protected SituacaoConta situacaoConta;
 	
 	protected Conta(){
-		this.situacaoConta = situacaoConta.PENDENTE;		
+		this.situacaoConta = SituacaoConta.PENDENTE;		
+	}
+	
+	public Conta(String descricao, Double valor, String dataVencimento){
+		this();
+		this.descricao = descricao;
+		this.valor = valor;
+		this.dataVencimento = dataVencimento;
 	}
 	
 	public String getDescricao() {
@@ -40,7 +47,7 @@ public class Conta {
 	}
 	
 	public void cancelar() {
-		if(situacaoConta == SituacaoConta.PENDENTE) {
+		if(this.situacaoConta == SituacaoConta.PENDENTE) {
 			this.situacaoConta = SituacaoConta.CANCELADA;
 			System.out.println("Conta cancelada com sucesso!");
 		} else {

@@ -12,9 +12,10 @@ public class TesteContador2 {
 		System.out.println("Contador objeto: " + c.count); //  NÃO RECOMENDADO
 		System.out.println("Contador sempre pela classe: " + Contador.count); //  boa prática, sempre pela classe
 		
-		// método estático		
+		// método estático - forma 1 pela classe	
 		Contador.imprimirContador();
 		
+		// método estático - forma 2 (embaixo do main)
 		imprimirContador();
 	}
 

@@ -1,5 +1,7 @@
 package com.algaworks.curso.fjoo.modelo;
 
+import desafio01.SituacaoConta;
+
 public class ContaPagar {
 		
 		String descricao;
@@ -39,8 +41,12 @@ public class ContaPagar {
 		}
 		
 		void cancelar() {
-			this.situacaoConta = SituacaoConta.CANCELADA;
-			System.out.println("Não é possível realizar cancelamento de conta que já foi CANCELADA ou PAGA. Essa conta está: " + getSituacaoConta());
+			if(situacaoConta == SituacaoConta.PENDENTE) {
+				this.situacaoConta = SituacaoConta.CANCELADA;
+				System.out.println("Conta cancelada com sucesso!");
+			} else {
+				System.out.println("Não é possível realizar cancelamento de conta que já foi CANCELADA ou PAGA. Essa conta está: " + getSituacaoConta());
+			}
 		}
 
 		public String getDescricao() {

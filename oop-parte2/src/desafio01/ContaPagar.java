@@ -6,8 +6,8 @@ public class ContaPagar extends Conta {
 
 	public ContaPagar(){}
 	
-	public ContaPagar(Fornecedor fornecedor, String descricao, Double valor, String dataVencimento){
-		super();
+	public ContaPagar(Fornecedor fornecedor, String descricao, double valor, String dataVencimento){
+		super(descricao, valor, dataVencimento);
 		this.fornecedor = fornecedor;
 	}
 	
@@ -20,7 +20,7 @@ public class ContaPagar extends Conta {
 	}
 	
 	public void pagar() {		
-		if(this.situacaoConta == SituacaoConta.PAGA || situacaoConta == SituacaoConta.CANCELADA) {
+		if(this.situacaoConta == SituacaoConta.PAGA || this.situacaoConta == SituacaoConta.CANCELADA) {
 			
 			System.out.println("Não é possível realizar pagamento de conta PAGA ou CANCELADA. Essa conta está: " + getSituacaoConta());	
 			
@@ -32,7 +32,7 @@ public class ContaPagar extends Conta {
 			System.out.println("INFORMAÇÕES DE PAGAMENTO");
 			System.out.println("---------------------------------");
 			System.out.println("Descrição: " + getDescricao());
-			System.out.println("Valor: " + getValor());
+			System.out.printf("Valor: R$%.2f \n", getValor());
 			System.out.println("Descrição: " + getDataVencimento());
 			System.out.println("Fornecedor: " + getFornecedor().getNome());			
 		}

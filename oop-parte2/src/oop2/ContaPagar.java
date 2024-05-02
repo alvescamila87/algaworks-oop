@@ -1,5 +1,7 @@
 package oop2;
 
+import com.algaworks.curso.fjoo.modelo.SituacaoConta;
+
 public class ContaPagar {
 	
 	String descricao;
@@ -8,7 +10,6 @@ public class ContaPagar {
 	Fornecedor fornecedor;
 	
 	ContaPagar(){
-		
 	}
 	
 	ContaPagar(Fornecedor fornecedor, String descricao, Double valor, String dataVencimento){
@@ -18,14 +19,15 @@ public class ContaPagar {
 		this.dataVencimento = dataVencimento;		
 	}
 	
-	void pagar() {
+	void pagar() {					
 		System.out.println("INFORMAÇÕES DE PAGAMENTO");
 		System.out.println("---------------------------------");
 		System.out.println("Descrição: " + descricao);
 		System.out.println("Valor: " + valor);
 		System.out.println("Descrição: " + dataVencimento);
-		System.out.println("Fornecedor: " + fornecedor.nome);
+		System.out.println("Fornecedor: " + fornecedor.nome);			
 	}
+	
 
 	public String getDescricao() {
 		return descricao;
@@ -58,7 +60,5 @@ public class ContaPagar {
 	public void setFornecedor(Fornecedor fornecedor) {
 		this.fornecedor = fornecedor;
 	}
-	
-	
 
 }
