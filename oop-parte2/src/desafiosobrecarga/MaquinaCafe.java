@@ -6,8 +6,6 @@ public class MaquinaCafe {
 
 	// sobrecarga de métodos
 	
-
-	
 	public void fazerCafe() {
 		fazerCafe(10);
 	}
