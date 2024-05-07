@@ -13,6 +13,7 @@ public class TestePolimorfismo {
 		// ----------------------------------------------
 				
 		ContaCorrente contaCorrente = new ContaCorrente();
+		//contaCorrente.getLimite() aqui acessa pois o tipo declarado é CONTA CORRENTE, então acessa o método
 		contaCorrente.setSaldo(3500);
 		imprimirSaldo(contaCorrente);
 		System.out.println();
@@ -28,6 +29,7 @@ public class TestePolimorfismo {
 		
 		Conta contaCorrente2 = new ContaCorrente();
 		contaCorrente2.setSaldo(23500);
+		//contaCorrente2.getLimite(); não pode pois o tipo declarado é CONTA e não CONTA CORRENTE, então não acessa o método
 		imprimirSaldo(contaCorrente2);
 		System.out.println();
 		
@@ -36,6 +38,7 @@ public class TestePolimorfismo {
 		imprimirSaldo(contaPoupanca2);
 		System.out.println();
 		
+				
 	}
 	
 	public static void imprimirSaldo(Conta conta) {
