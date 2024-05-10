@@ -11,6 +11,4 @@ public class Professor extends Pessoa  {
 	public void setID(String iD) {
 		this.ID = iD;
 	}
-	
-
 }

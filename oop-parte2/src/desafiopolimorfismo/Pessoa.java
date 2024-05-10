@@ -1,6 +1,6 @@
-package com.algaworks.curso.fjoo.polimorfismo;
+package desafiopolimorfismo;
 
-public class Pessoa {
+public abstract class Pessoa {
 	
 	private String nome;
 
@@ -11,5 +11,7 @@ public class Pessoa {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
+	
+	public abstract void exibirDetalhes();
 
 }
