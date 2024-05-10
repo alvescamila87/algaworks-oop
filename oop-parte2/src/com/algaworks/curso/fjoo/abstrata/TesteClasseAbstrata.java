@@ -9,7 +9,7 @@ public class TesteClasseAbstrata {
 		
 		// casting objeto	
 		ProdutoPerecivel pp = (ProdutoPerecivel) p1;
-		pp.dataValidade = "08/05/2024";
+		pp.dataValidade = "08/05/2024";		
 		
 		pp.imprimirDescricao();
 	}

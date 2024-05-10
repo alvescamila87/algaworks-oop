@@ -1,5 +1,5 @@
 package desafio02;
 
-public class Fornecedor {
+public class Fornecedor extends Pessoa {
 
 }
