@@ -21,8 +21,8 @@ public class ContaReceber extends Conta{
 	}
 
 	public void receber() {
-		if (getSituacaoConta() == SituacaoConta.PAGA) {
-			System.out.println("Esta conta já foi paga. Situação da conta: " + getSituacaoConta());
+		if (getSituacaoConta() == SituacaoConta.PAGA || getSituacaoConta() == SituacaoConta.CANCELADA) {
+			System.out.println("Não é possível receber conta PAGA ou CANCELADA. Situação da conta: " + getSituacaoConta());
 		} else {
 			situacaoConta = SituacaoConta.PAGA;
 
