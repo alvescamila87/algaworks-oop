@@ -1,5 +1,23 @@
 package com.algaworks.curso.fjoo.interfaces.pagamento;
 
 public class Cartao {
+	
+	// Informações necessárias na operadora de cartão
+	
+	private String nomeTitular;
+	private String numeroCartao;
+	
+	public String getNomeTitular() {
+		return nomeTitular;
+	}
+	public void setNomeTitular(String nomeTitular) {
+		this.nomeTitular = nomeTitular;
+	}
+	public String getNumeroCartao() {
+		return numeroCartao;
+	}
+	public void setNumeroCartao(String numeroCartao) {
+		this.numeroCartao = numeroCartao;
+	}	
 
 }
