@@ -20,7 +20,7 @@ public class TesteCheckoutHP {
 		Compra compra = new Compra();
 		compra.setNomeCliente("Zebedeu Abraão");
 		compra.setProduto("Creme dental");
-		compra.setValorTotal(600);
+		compra.setValorTotal(10.9);
 		
 		Checkout checkout = new Checkout(operadora, impressora);
 		checkout.fecharCompra(compra, cartao);
