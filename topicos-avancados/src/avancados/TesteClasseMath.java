@@ -49,7 +49,7 @@ public class TesteClasseMath {
 		
 		// Numeros randômicos
 		double numeroAleatorio = Math.random() * 100;
-		System.out.println("Número aleatório: " + (int) numeroAleatorio);
+		System.out.println("Número aleatório: " + (int) numeroAleatorio); //casting pra arrendondar pra inteiro
 		
 	}
 
