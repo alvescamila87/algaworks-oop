@@ -50,63 +50,14 @@ public class TesteContaExcecoes {
 		
 		try{
 			contaPagar01.pagar(); // paga
-		} catch (OperacaoContaException e) {
-			System.err.println("ERRO: Operação não autorizada. MOTIVO --> " + e.getMessage());
-		}
-		
-		try{
-			contaPagar01.cancelar(); // não cancela, pois já é regra de negócio
-		} catch (OperacaoContaException e) {
-			System.err.println("ERRO: Operação não autorizada. MOTIVO --> " + e.getMessage());
-		}
-		
-		try{
-			contaPagar01.pagar(); // não paga e lançar exception
-		} catch (OperacaoContaException e) {
-			System.err.println("ERRO: Operação não autorizada. MOTIVO --> " + e.getMessage());
-		}
-		
-		try{
 			contaPagar02.cancelar(); // cancela
+			
+			contaReceber01.receber(); // recebe
+			contaReceber02.cancelar(); // cancela
+			contaReceber02.receber(); // gera exceção
 		} catch (OperacaoContaException e) {
 			System.err.println("ERRO: Operação não autorizada. MOTIVO --> " + e.getMessage());
 		}
 		
-		try{
-			contaPagar02.cancelar(); // não cancela e não lança exception, regra de negócio
-		} catch (OperacaoContaException e) {
-			System.err.println("ERRO: Operação não autorizada. MOTIVO --> " + e.getMessage());
-		}		
-		
-		try{
-			contaReceber02.receber(); // recebe
-		} catch (OperacaoContaException e) {
-			System.err.println("ERRO: Operação não autorizada. MOTIVO --> " + e.getMessage());
-		}
-		
-		try{
-			contaReceber02.receber(); // não recebe e não lança exception
-		} catch (OperacaoContaException e) {
-			System.err.println("ERRO: Operação não autorizada. MOTIVO --> " + e.getMessage());
-		}		
-		
-		try{
-			contaReceber02.cancelar(); 
-		} catch (OperacaoContaException e) {
-			System.err.println("ERRO: Operação não autorizada. MOTIVO --> " + e.getMessage());
-		}	
-		
-		try{
-			contaReceber01.cancelar(); 
-		} catch (OperacaoContaException e) {
-			System.err.println("ERRO: Operação não autorizada. MOTIVO --> " + e.getMessage());
-		}
-		
-		try{
-			contaPagar01.cancelar(); 
-		} catch (OperacaoContaException e) {
-			System.err.println("ERRO: Operação não autorizada. MOTIVO --> " + e.getMessage());
-		}	
 	}
-
 }
