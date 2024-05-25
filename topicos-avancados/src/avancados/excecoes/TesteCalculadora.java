@@ -9,8 +9,14 @@ public class TesteCalculadora {
 		int soma = calc.somar(10, 5);
 		System.out.println("Soma dos valores é: " + soma);
 		
-		int subtracao = calc.subtrair(35, 54);
-		System.out.println("Subtração dos valores é: " + subtracao);
+		// Exceção checked - Regra de negócio
+		try {
+			int subtracao = calc.subtrair(35, 54);
+			System.out.println("Subtração dos valores é: " + subtracao);
+		} catch (ValorNegativoException e) {
+			System.err.println("Essa operação não pode ser realizada: " + e.getMessage());
+		}
+		
 		
 		// Exceção unchecked
 		try {

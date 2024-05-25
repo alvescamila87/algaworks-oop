@@ -6,7 +6,10 @@ public class Calculadora {
 		return num1 + num2;		
 	}
 
-	public int subtrair(int num1, int num2) {
+	public int subtrair(int num1, int num2) throws ValorNegativoException {
+		if(num1 <= 0 || num1 < num2) {
+			throw new ValorNegativoException("ERRO: O saldo ficará negativo. Operação impedida!");
+		}
 		return num1 - num2;		
 	}
 	
