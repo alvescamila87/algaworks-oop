@@ -54,10 +54,14 @@ public class TesteContaExcecoes {
 			
 			contaReceber01.receber(); // recebe
 			contaReceber02.cancelar(); // cancela
-			contaReceber02.receber(); // gera exceção
+			contaReceber02.receber(); // gera exceção			
+			
 		} catch (OperacaoContaException e) {
 			System.err.println("ERRO: Operação não autorizada. MOTIVO --> " + e.getMessage());
+		} finally {
+			System.out.println("Finally");
 		}
+		
 		
 	}
 }

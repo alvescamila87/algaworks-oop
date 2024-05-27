@@ -51,7 +51,8 @@ public abstract class Conta {
 			this.situacaoConta = situacaoConta.CANCELADA;
 			System.out.println("Conta cancelada com sucesso!");
 		} else {
-			System.out.println("Não é possível realizar o cancelamento de conta que já foi CANCELADA ou PAGA. Essa conta está: " + getSitucaoConta());
+			//System.out.println("Não é possível realizar o cancelamento de conta que já foi CANCELADA ou PAGA. Essa conta está: " + getSitucaoConta());
+			throw new OperacaoContaException("Não é possível realizar o cancelamento de conta que já foi CANCELADA ou PAGA.");
 		}
 	}
 	
