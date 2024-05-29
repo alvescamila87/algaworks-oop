@@ -19,7 +19,7 @@ public class DesafioNumeros {
 		DecimalFormat formatador = new DecimalFormat("R$ #,##00.00");
 		String valorMonetario = formatador.format(bd);
 		
-		System.out.println("Somente os 10% do valor do produto: " + valorMonetario + ".");
+		System.out.println("Somente os 10% do valor do produto é: " + valorMonetario + ".");
 	}
 
 }
