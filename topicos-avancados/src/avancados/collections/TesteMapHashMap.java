@@ -28,6 +28,7 @@ public class TesteMapHashMap {
 	}
 
 	private static void imprimirAlunos(Map<String, Aluno> alunos) {
+		 // Itera sobre os valores do mapa
 		for (Aluno a : alunos.values()) {
 			System.out.println("Map Aluno: " + a.getNome());
 		}
