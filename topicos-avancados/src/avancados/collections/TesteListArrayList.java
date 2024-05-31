@@ -12,12 +12,14 @@ public class TesteListArrayList {
 		Aluno a3 = new Aluno("Davi");
 		Aluno a4 = new Aluno("Judite");
 		
-		// Interface List e Classe ArrayList
+		// Interface List e Classe ArrayList		
 		List<Aluno> alunos = new ArrayList<>();
 		
 		alunos.add(a1);
 		alunos.add(a2);
 		alunos.add(a3);
+		alunos.add(a4);
+		// ArrayList aceita mais de um mesmo objeto na lista
 		alunos.add(a4);
 		
 		imprimirAlunos(alunos);
@@ -25,7 +27,7 @@ public class TesteListArrayList {
 	
 	public static void imprimirAlunos(List<Aluno> alunos) {
 		for(Aluno a : alunos) {
-			System.out.println("Nome do aluno: " + a.getNome());
+			System.out.println("ArrayList aluno: " + a.getNome());
 		}
 	}
 
