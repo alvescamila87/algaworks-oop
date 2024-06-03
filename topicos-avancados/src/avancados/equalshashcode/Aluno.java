@@ -42,8 +42,6 @@ public class Aluno {
 			return false;
 		Aluno other = (Aluno) obj;
 		return Objects.equals(nome, other.nome);
-	}
-	
-	
+	}	
 
 }

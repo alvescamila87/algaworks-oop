@@ -14,7 +14,7 @@ public class TesteSetHashSet {
 		if(alunos.contains(alunoSorteado)) {
 			System.out.println("Parabéns, " + alunoSorteado.getNome() + "! Você ganhou um prêmio!");
 		} else {
-			System.out.println("Aluno não encontrado!");
+			System.out.println("Aluno não encontrado!");	
 		}
 		
 	}

@@ -10,7 +10,7 @@ public class SimuladorBancoDeDados {
 		Set<Aluno> alunos = new HashSet<>();
 		alunos.add(new Aluno("João"));
 		alunos.add(new Aluno("Maria"));
-		alunos.add(new Aluno("João"));
+		alunos.add(new Aluno("Pedro"));
 		
 		return alunos;
 		

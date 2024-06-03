@@ -3,8 +3,15 @@ package avancados.collections.desafio;
 import java.math.BigDecimal;
 import java.text.DecimalFormat;
 
+/**
+ * @author Camila
+ */
 public class TestePolitico {
 	
+	/**
+	 * Realiza o cálculo das contas do Governo por partido político e cargo.
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		
 		DecimalFormat formatador = new DecimalFormat("R$ #,##0.00");
