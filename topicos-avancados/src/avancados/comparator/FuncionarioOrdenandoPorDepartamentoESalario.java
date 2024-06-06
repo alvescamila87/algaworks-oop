@@ -12,7 +12,7 @@ public class FuncionarioOrdenandoPorDepartamentoESalario implements Comparator<F
 		
 		// Se os departamentos forem iguais, ordena pelo salário (decrescente)
 		if(resultado == 0) {
-			resultado = Double.compare(f1.getSalario(), f2.getSalario());
+			resultado = Double.compare(f2.getSalario(), f1.getSalario());
 		}
 		return resultado;
 	}

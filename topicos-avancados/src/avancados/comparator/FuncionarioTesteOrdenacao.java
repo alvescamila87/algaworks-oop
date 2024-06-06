@@ -9,6 +9,14 @@ public class FuncionarioTesteOrdenacao {
 	
 	public static void main(String[] args) {
 		
+		/*
+		 * Exercício: Crie uma classe Funcionario com os atributos nome, 
+		 * salario e departamento. Implemente um comparador que ordene os funcionários 
+		 * pelo departamento (em ordem alfabética) e, dentro de cada departamento, pelo salário 
+		 * (em ordem decrescente). Crie uma lista de funcionários, ordene-a utilizando esse comparador e imprima a 
+		 * lista ordenada.
+		 */
+		
 		Funcionario f1 = new Funcionario("Zebedeu", 3000, "A");
 		Funcionario f2 = new Funcionario("Davi", 1500, "B");
 		Funcionario f3 = new Funcionario("Paulo", 5500, "B");
