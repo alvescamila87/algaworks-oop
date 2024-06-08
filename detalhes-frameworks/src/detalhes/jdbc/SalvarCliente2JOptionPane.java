@@ -10,7 +10,7 @@ import detalhes.jdbc.modelo.Cliente;
 public class SalvarCliente2JOptionPane {
 
 	public static void main(String[] args) throws Exception {
-
+		// Com modal JOPtionPane
 		UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());
 
 		// Criar cliente
