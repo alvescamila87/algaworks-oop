@@ -13,6 +13,7 @@ public class SalvandoProduto {
 	
 	public static void main(String[] args) throws FileNotFoundException {
 		
+		// Mapeamento
 		XStream xstream = new XStream(new DomDriver());
 		xstream.alias("produto", Produto.class);
 		xstream.aliasAttribute(Produto.class, "codigo", "codigo");
