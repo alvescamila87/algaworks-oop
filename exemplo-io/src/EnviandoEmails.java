@@ -16,7 +16,7 @@ public class EnviandoEmails {
             }
 
         } catch (IOException e){
-            System.out.println("Não conseguiu ler o arquivo." + e.getMessage());
+            System.err.println("Não conseguiu ler o arquivo." + e.getMessage());
         }
 
     }

@@ -14,7 +14,7 @@ public class GravandoEmailsModo1 {
             }
 
         } catch (IOException e) {
-            System.out.println("Não conseguiu gravar o arquivo." + e.getMessage());
+            System.err.println("Não conseguiu gravar o arquivo." + e.getMessage());
         }
     }
 }
