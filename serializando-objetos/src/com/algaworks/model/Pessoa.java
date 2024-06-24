@@ -5,7 +5,7 @@ import java.io.Serializable;
 public class Pessoa implements Serializable {
 	
 	/**
-	 * Versão da classe
+	 * Versão da classe para controle de serialização e desserialização
 	 */
 	private static final long serialVersionUID = 2L;
 	
