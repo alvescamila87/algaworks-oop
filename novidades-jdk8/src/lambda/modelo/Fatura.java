@@ -41,4 +41,13 @@ public class Fatura {
 	}
 	
 	
+	public boolean estaEmRisco() {
+		return valor >= 250 ? true : false;
+	}
+	
+	@Override
+	public String toString() {
+		return "E-mail: " + emailDevedor + ". Valor R$ " + valor; 
+	}
+	
 }
