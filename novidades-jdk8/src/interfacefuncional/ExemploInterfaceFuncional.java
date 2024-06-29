@@ -7,9 +7,10 @@ public class ExemploInterfaceFuncional {
 		//Impressora i = new ImpressoraHP();
 		//i.imprimir();			
 		
-		Impressora i = () -> {
+		// Sem parâmetros no () -> 
+		/*Impressora i = () -> {
 			System.out.println("Simulando impressão.");
-		};
+		};*/
 	}		
 
 }
