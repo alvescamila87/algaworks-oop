@@ -1,5 +1,6 @@
 package apidata.model;
 
+import java.time.Duration;
 import java.time.LocalDateTime;
 
 public class Aluguel {
@@ -56,6 +57,18 @@ public class Aluguel {
 
 	public void setDataEHoraRealDaDevolucao(LocalDateTime dataEHoraRealDaDevolucao) {
 		this.dataEHoraRealDaDevolucao = dataEHoraRealDaDevolucao;
+	}
+
+	public void imprimeFatura() {
+		Duration duration = Duration.between(dataEHoraPrevistaParaDevolucao, dataEHoraRealDaDevolucao);
+		System.out.println(">>>>>>>>>>>>>>>>>> FATURA <<<<<<<<<<<<<<<<<<<");
+		if(!duration.isNegative()) {
+			double multa = duration.toHours() * carro.getValorDiaria() * 0.1;
+			System.out.printf("Valor da multa: R$%.2f. Pois você atrasou %s dias.", multa, duration.toHours());
+		} else {
+			System.out.println("Obrigado. Você foi pontual.");
+		}
+		
 	}
 
 }
